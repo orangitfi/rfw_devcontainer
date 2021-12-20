@@ -1,4 +1,4 @@
-# Dockerfile for running tests
+# Dockerfile for running test
 
 FROM mcr.microsoft.com/playwright:focal
 COPY . /tests/
