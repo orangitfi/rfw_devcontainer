@@ -1,0 +1,19 @@
+# If you have redhat.vscode-yaml plugin installed in vs code then the following line
+# will give you validation and code completion
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: "Example workflow"
+
+on:
+  push:
+    branches:
+      - development
+jobs:
+  Run-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Execute the Robot test in container
+      run: |
+        ./run_test_container.sh
+
